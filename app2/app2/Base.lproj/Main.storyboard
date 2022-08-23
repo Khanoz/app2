@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l8Z-ba-CaB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aiW-kc-ngG">
+            <objects>
+                <navigationController id="l8Z-ba-CaB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7rS-Ra-bEX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yIT-Lh-uYm" kind="relationship" relationship="rootViewController" id="BL2-QI-aFq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3t-aW-pWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1693" y="29"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -194,6 +210,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Zd5-h8-AOs"/>
                     <connections>
                         <outlet property="forgotten_password" destination="MEx-nm-ieC" id="TsV-2E-hik"/>
                         <outlet property="img_logo" destination="oiD-j4-Xj6" id="PfL-45-pYp"/>
@@ -215,7 +232,38 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="120.28985507246378" y="91.071428571428569"/>
+            <point key="canvasLocation" x="55" y="9"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Q8b-F9-pPT">
+            <objects>
+                <viewController id="yIT-Lh-uYm" customClass="HomeViewController" customModule="app2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ez4-XM-b6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-mR-mEx" customClass="Home">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mon-O4-BJU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cap-mR-mEx" firstAttribute="leading" secondItem="mon-O4-BJU" secondAttribute="leading" id="4YR-Uo-VVm"/>
+                            <constraint firstItem="Cap-mR-mEx" firstAttribute="trailing" secondItem="mon-O4-BJU" secondAttribute="trailing" id="7f5-YK-SCX"/>
+                            <constraint firstAttribute="bottom" secondItem="Cap-mR-mEx" secondAttribute="bottom" id="Hz9-b0-Y5x"/>
+                            <constraint firstItem="Cap-mR-mEx" firstAttribute="top" secondItem="mon-O4-BJU" secondAttribute="top" id="tXF-6D-0up"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="Bna-ku-zSh"/>
+                    <connections>
+                        <outlet property="table_view" destination="Cap-mR-mEx" id="hpq-SV-JPg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJl-YC-QDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849.27536231884062" y="28.794642857142854"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemBackgroundColor"/>

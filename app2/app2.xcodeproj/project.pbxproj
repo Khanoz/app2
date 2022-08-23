@@ -13,6 +13,7 @@
 		80482DAE28ADC456006943C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80482DAC28ADC456006943C3 /* Main.storyboard */; };
 		80482DB028ADC458006943C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80482DAF28ADC458006943C3 /* Assets.xcassets */; };
 		80482DB328ADC458006943C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80482DB128ADC458006943C3 /* LaunchScreen.storyboard */; };
+		80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		80482DAF28ADC458006943C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80482DB228ADC458006943C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80482DB428ADC458006943C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				80482DA628ADC456006943C3 /* AppDelegate.swift */,
 				80482DA828ADC456006943C3 /* SceneDelegate.swift */,
 				80482DAA28ADC456006943C3 /* ViewController.swift */,
+				80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */,
 				80482DAC28ADC456006943C3 /* Main.storyboard */,
 				80482DAF28ADC458006943C3 /* Assets.xcassets */,
 				80482DB128ADC458006943C3 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				80482DAB28ADC456006943C3 /* ViewController.swift in Sources */,
 				80482DA728ADC456006943C3 /* AppDelegate.swift in Sources */,
 				80482DA928ADC456006943C3 /* SceneDelegate.swift in Sources */,
+				80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
