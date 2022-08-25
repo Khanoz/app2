@@ -14,6 +14,9 @@
 		80482DB028ADC458006943C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80482DAF28ADC458006943C3 /* Assets.xcassets */; };
 		80482DB328ADC458006943C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80482DB128ADC458006943C3 /* LaunchScreen.storyboard */; };
 		80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */; };
+		80EE282428B6FF78001130A0 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282328B6FF78001130A0 /* Segues.swift */; };
+		80EE282628B7028F001130A0 /* LoginNetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */; };
+		80EE282828B710CB001130A0 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282728B710CB001130A0 /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		80482DB228ADC458006943C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80482DB428ADC458006943C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80EE282328B6FF78001130A0 /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetflixViewController.swift; sourceTree = "<group>"; };
+		80EE282728B710CB001130A0 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		80482DA528ADC456006943C3 /* app2 */ = {
 			isa = PBXGroup;
 			children = (
+				80EE282728B710CB001130A0 /* Checkbox.swift */,
 				80482DA628ADC456006943C3 /* AppDelegate.swift */,
 				80482DA828ADC456006943C3 /* SceneDelegate.swift */,
 				80482DAA28ADC456006943C3 /* ViewController.swift */,
@@ -66,6 +73,8 @@
 				80482DAF28ADC458006943C3 /* Assets.xcassets */,
 				80482DB128ADC458006943C3 /* LaunchScreen.storyboard */,
 				80482DB428ADC458006943C3 /* Info.plist */,
+				80EE282328B6FF78001130A0 /* Segues.swift */,
+				80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */,
 			);
 			path = app2;
 			sourceTree = "<group>";
@@ -143,6 +152,9 @@
 			files = (
 				80482DAB28ADC456006943C3 /* ViewController.swift in Sources */,
 				80482DA728ADC456006943C3 /* AppDelegate.swift in Sources */,
+				80EE282628B7028F001130A0 /* LoginNetflixViewController.swift in Sources */,
+				80EE282428B6FF78001130A0 /* Segues.swift in Sources */,
+				80EE282828B710CB001130A0 /* Checkbox.swift in Sources */,
 				80482DA928ADC456006943C3 /* SceneDelegate.swift in Sources */,
 				80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */,
 			);
@@ -307,7 +319,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +346,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

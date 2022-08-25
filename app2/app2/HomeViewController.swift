@@ -12,15 +12,23 @@ class HomeViewController: UIViewController {
     
 
     @IBOutlet weak var table_view: UITableView!
-    let data: [String] = ["h","o","l","a"]
+    /*let labels: [String] = ["login", "label"]
+    let segues: [String] = ["homeToFacebook", "toLabel"]*/
+    let data: [Segues] = [Segues(id: "login", segueId: "homeToFacebook"), Segues(id: "label", segueId: "toLabel")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         table_view.dataSource = self
         table_view.delegate = self
-        // Do any additional setup after loading the view.
+        // Do any additional setup after load ing the view.
     }
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == data.last?.segueId{
+            let lnvw = segue.destination as? LoginNetflixViewController
+            lnvw?.labelTitle = data.last?.id ?? ""
+        }
+    }*/
     
 
     /*
@@ -46,13 +54,23 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             cell = UITableViewCell()
         }
         let item = data[indexPath.row]
-        cell?.textLabel?.text = item
+        cell?.textLabel?.text = item.id
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = data[indexPath.row]
-        print("click: \(item)")
+        print("click: \(type(of: item))")
+        performSegue(withIdentifier: item.segueId, sender: nil)
+        //navigationController?.performSegue(withIdentifier: "homeToFacebook", sender: nil)
     }
     
 }
+/*
+ blue: 9
+ orange: 7
+ yellow: 4
+ green: 5
+ red: 3
+ brown: 4
+*/
