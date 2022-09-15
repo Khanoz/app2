@@ -14,7 +14,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var table_view: UITableView!
     /*let labels: [String] = ["login", "label"]
     let segues: [String] = ["homeToFacebook", "toLabel"]*/
-    let data: [Segues] = [Segues(id: "login", segueId: "homeToFacebook"), Segues(id: "label", segueId: "toLabel")]
+    let data: [Segues] = [
+                            Segues(id: "login", segueId: "homeToFacebook"),
+                            Segues(id: "label", segueId: "toLabel"),
+                            Segues(id: "pokemon", segueId: "toPokeAPI")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

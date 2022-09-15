@@ -14,6 +14,9 @@
 		80482DB028ADC458006943C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80482DAF28ADC458006943C3 /* Assets.xcassets */; };
 		80482DB328ADC458006943C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80482DB128ADC458006943C3 /* LaunchScreen.storyboard */; };
 		80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */; };
+		80B9829428C037A10042302A /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 80B9829328C037A10042302A /* PokemonAPI */; };
+		80B9829828C039180042302A /* PokeAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9829728C039180042302A /* PokeAPIViewController.swift */; };
+		80B9829A28C045510042302A /* PokemonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9829928C045510042302A /* PokemonInfoViewController.swift */; };
 		80EE282428B6FF78001130A0 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282328B6FF78001130A0 /* Segues.swift */; };
 		80EE282628B7028F001130A0 /* LoginNetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */; };
 		80EE282828B710CB001130A0 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE282728B710CB001130A0 /* Checkbox.swift */; };
@@ -29,6 +32,8 @@
 		80482DB228ADC458006943C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80482DB428ADC458006943C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A8C32B28B46FC6003ECE24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80B9829728C039180042302A /* PokeAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPIViewController.swift; sourceTree = "<group>"; };
+		80B9829928C045510042302A /* PokemonInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoViewController.swift; sourceTree = "<group>"; };
 		80EE282328B6FF78001130A0 /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetflixViewController.swift; sourceTree = "<group>"; };
 		80EE282728B710CB001130A0 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B9829428C037A10042302A /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 		80482DA528ADC456006943C3 /* app2 */ = {
 			isa = PBXGroup;
 			children = (
+				80B9829728C039180042302A /* PokeAPIViewController.swift */,
 				80EE282728B710CB001130A0 /* Checkbox.swift */,
 				80482DA628ADC456006943C3 /* AppDelegate.swift */,
 				80482DA828ADC456006943C3 /* SceneDelegate.swift */,
@@ -75,6 +82,7 @@
 				80482DB428ADC458006943C3 /* Info.plist */,
 				80EE282328B6FF78001130A0 /* Segues.swift */,
 				80EE282528B7028F001130A0 /* LoginNetflixViewController.swift */,
+				80B9829928C045510042302A /* PokemonInfoViewController.swift */,
 			);
 			path = app2;
 			sourceTree = "<group>";
@@ -95,6 +103,9 @@
 			dependencies = (
 			);
 			name = app2;
+			packageProductDependencies = (
+				80B9829328C037A10042302A /* PokemonAPI */,
+			);
 			productName = app2;
 			productReference = 80482DA328ADC456006943C3 /* app2.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 80482D9A28ADC456006943C3;
+			packageReferences = (
+				80B9829228C037A10042302A /* XCRemoteSwiftPackageReference "PokemonAPI" */,
+			);
 			productRefGroup = 80482DA428ADC456006943C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,9 +167,11 @@
 				80482DAB28ADC456006943C3 /* ViewController.swift in Sources */,
 				80482DA728ADC456006943C3 /* AppDelegate.swift in Sources */,
 				80EE282628B7028F001130A0 /* LoginNetflixViewController.swift in Sources */,
+				80B9829A28C045510042302A /* PokemonInfoViewController.swift in Sources */,
 				80EE282428B6FF78001130A0 /* Segues.swift in Sources */,
 				80EE282828B710CB001130A0 /* Checkbox.swift in Sources */,
 				80482DA928ADC456006943C3 /* SceneDelegate.swift in Sources */,
+				80B9829828C039180042302A /* PokeAPIViewController.swift in Sources */,
 				80A8C32C28B46FC6003ECE24 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80B9829228C037A10042302A /* XCRemoteSwiftPackageReference "PokemonAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinkofer/PokemonAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80B9829328C037A10042302A /* PokemonAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80B9829228C037A10042302A /* XCRemoteSwiftPackageReference "PokemonAPI" */;
+			productName = PokemonAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80482D9B28ADC456006943C3 /* Project object */;
 }

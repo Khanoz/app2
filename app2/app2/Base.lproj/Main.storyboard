@@ -470,7 +470,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgk-8p-l9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="625.44642857142856"/>
+            <point key="canvasLocation" x="159" y="607"/>
+        </scene>
+        <!--PokeAPI View Controller-->
+        <scene sceneID="qbb-8E-9mc">
+            <objects>
+                <viewController id="EuI-hF-qos" customClass="PokeAPIViewController" customModule="app2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ldH-FS-2k2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3kL-qr-TYK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="wfX-h3-AmA">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gwe-aD-JzH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3kL-qr-TYK" firstAttribute="centerX" secondItem="ldH-FS-2k2" secondAttribute="centerX" id="LvJ-pM-s67"/>
+                            <constraint firstItem="3kL-qr-TYK" firstAttribute="leading" secondItem="Gwe-aD-JzH" secondAttribute="leading" id="YTd-z5-7gi"/>
+                            <constraint firstItem="3kL-qr-TYK" firstAttribute="centerY" secondItem="ldH-FS-2k2" secondAttribute="centerY" id="mfp-Zb-q7B"/>
+                            <constraint firstItem="3kL-qr-TYK" firstAttribute="top" secondItem="Gwe-aD-JzH" secondAttribute="top" id="q5z-gM-R4l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Y5-9q-ZdG"/>
+                    <connections>
+                        <outlet property="loading_icon" destination="wfX-h3-AmA" id="qwm-SQ-5ZS"/>
+                        <outlet property="table_view" destination="3kL-qr-TYK" id="BEp-2Y-8KS"/>
+                        <segue destination="sRS-dk-iFG" kind="show" identifier="toPokeInfo" id="UtB-se-5C1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dU-Hh-xwO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="1238"/>
+        </scene>
+        <!--Pokemon Info View Controller-->
+        <scene sceneID="W7m-eT-IuP">
+            <objects>
+                <viewController id="sRS-dk-iFG" customClass="PokemonInfoViewController" customModule="app2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXv-YF-LOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D9Q-Xa-lTC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="K7M-VO-hlf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYl-DQ-vVa">
+                                <rect key="frame" x="45" y="438" width="324" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3ea-Qd-3ZA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A11-hY-165"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oYl-DQ-vVa" firstAttribute="top" secondItem="D9Q-Xa-lTC" secondAttribute="bottom" constant="38" id="0hg-4M-d9N"/>
+                            <constraint firstItem="D9Q-Xa-lTC" firstAttribute="leading" secondItem="A11-hY-165" secondAttribute="leading" id="Cwh-Z4-LkJ"/>
+                            <constraint firstItem="D9Q-Xa-lTC" firstAttribute="trailing" secondItem="A11-hY-165" secondAttribute="trailing" id="JOR-0T-QoD"/>
+                            <constraint firstItem="D9Q-Xa-lTC" firstAttribute="top" secondItem="FXv-YF-LOJ" secondAttribute="top" id="tSM-A2-QK7"/>
+                            <constraint firstItem="oYl-DQ-vVa" firstAttribute="leading" secondItem="A11-hY-165" secondAttribute="leading" constant="45" id="yvS-do-hUt"/>
+                            <constraint firstItem="A11-hY-165" firstAttribute="trailing" secondItem="oYl-DQ-vVa" secondAttribute="trailing" constant="45" id="z8Z-Nf-wLR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1SH-H2-9uq"/>
+                    <connections>
+                        <outlet property="pokemon_image" destination="D9Q-Xa-lTC" id="4nj-FF-kms"/>
+                        <outlet property="pokemon_name" destination="oYl-DQ-vVa" id="gUb-CC-TFN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6j2-rX-5eO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="1252.2321428571429"/>
         </scene>
         <!--Home-->
         <scene sceneID="Q8b-F9-pPT">
@@ -499,11 +581,12 @@
                         <outlet property="table_view" destination="Cap-mR-mEx" id="hpq-SV-JPg"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeToFacebook" id="g6g-q1-QYC"/>
                         <segue destination="ewt-AZ-WRk" kind="show" identifier="toLabel" id="Jg1-Og-RFY"/>
+                        <segue destination="EuI-hF-qos" kind="show" identifier="toPokeAPI" id="Dgr-Pm-DHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJl-YC-QDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849.27536231884062" y="28.794642857142854"/>
+            <point key="canvasLocation" x="-903" y="185"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemBackgroundColor"/>
